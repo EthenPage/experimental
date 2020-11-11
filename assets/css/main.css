@@ -1,0 +1,102 @@
+/* general */
+body{
+    font-family: "Raleway", sans-serif;
+}
+
+/* Hero Section */
+#hero{
+    background-image: url(/assets/img/hero-bg.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+}
+
+#hero::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#hero .container{
+    text-align: center;
+}
+
+#hero h1{
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+#hero h2{
+    color: #dadada;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.btn-play{
+    background: radial-gradient(#009961 50%, rgba(0, 153, 97, 0.4) 52%);
+    width: 94px;
+    height: 94px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-top: 30px;
+    position: relative;
+}
+
+.btn-play::before{
+    border: 5px solid rgba(0, 153, 97, 0.6);
+    content: '';
+    width: 120px;
+    height: 120px;
+    animation-name: progression;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    left: -13px;
+    top: -13px;
+    position: absolute;
+    border-radius: 50%;
+
+}
+
+.btn-play::after{
+    content: '';
+    top: 36px;
+    left: 40px;
+    position: absolute;
+    border-left: 18px solid white;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+@media(min-width:992px){
+    #hero h1{
+        font-size: 48px;
+    }
+
+    #hero h2{
+        font-size: 28px;
+    }
+}
+
+@keyframes progression{
+    0%{
+        transform: scale(0.6, 0.6);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1, 1);
+        opacity: 0;
+    }
+}
+
+main{
+    height: 100vh;
+}
