@@ -1,6 +1,6 @@
 /* general */
 body{
-    font-family: "Raleway", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 /* Hero Section */
@@ -11,7 +11,7 @@ body{
     background-repeat: no-repeat;
     height: 100vh;
     position: relative;
-    background-attachment: fixed;
+    font-family: "Raleway", sans-serif;
 }
 
 #hero::before{
@@ -76,7 +76,14 @@ body{
     border-bottom: 10px solid transparent;
 }
 
+@media(min-width:1024px){
+    #hero{
+        background-attachment: fixed;
+    }
+}
+
 @media(min-width:992px){
+    
     #hero h1{
         font-size: 48px;
     }
@@ -97,6 +104,68 @@ body{
     }
 }
 
-main{
-    height: 100vh;
+/* About Us */
+#about{
+    margin-top: 6em;
+}
+
+#about h1{
+    font-weight: 700;
+    color: #555755;
+    position: relative;
+    margin-bottom: 1em;
+}
+
+#about h1::after{
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 60px;
+    height: 5px;
+    background: #009961;
+}
+
+.about-head p{
+    color: #707270;
+}
+
+.about-desc{
+    margin-top: 2em;
+    margin-bottom: 4em;
+    color: #393a39;
+}
+
+.about-desc ul li{
+    position: relative;
+    padding-left: 2.5em;
+    margin-bottom: 0.8em;
+}
+
+.about-desc ul li i{
+    color: #009961;
+    font-size: 24px;
+    font-weight: 500;
+    position: absolute;
+    top: -5px;
+    left: 0;
+}
+
+.about-desc a{
+    border: 2px solid #009961;
+    padding: 10px 25px;
+    border-radius: 50px;
+    margin-top: 1em;
+    display: inline-block;
+    color: #009961;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: background-color 0.8s ease-out;
+}
+
+.about-desc a:hover{
+    background-color: #009961;
+    color: white;
 }
